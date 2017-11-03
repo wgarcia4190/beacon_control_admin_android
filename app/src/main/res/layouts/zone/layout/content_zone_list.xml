@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/zone_margin"
+    android:layout_marginTop="@dimen/zone_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sigma.beaconcontrol.views.zone.ZoneAndFloorActivity"
+    tools:showIn="@layout/zone_and_floor_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.sigma.beaconcontrol.views.widgets.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_text_bottom_margin"
+            android:layout_marginStart="@dimen/zone_margin"
+            android:text="@string/zones_with_punctuation"
+            android:textColor="@color/main_sub_text_color"
+            android:textSize="@dimen/main_sub_text_size"
+            android:textStyle="normal"
+            app:fontPath="Raleway-SemiBold.ttf" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/zone_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.sigma.beaconcontrol.views.widgets.CustomButton
+            android:id="@+id/add_zone_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_save_button_height"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="@dimen/zone_margin"
+            android:layout_marginStart="@dimen/zone_margin"
+            android:background="@color/colorPrimary"
+            android:text="@string/add_zone"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_text_size"
+            app:fontPath="Raleway-SemiBold.ttf" />
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

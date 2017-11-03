@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f17f03</color>
+    <color name="colorPrimaryDark">#d05d02</color>
+    <color name="colorAccent">#f17f03</color>
+    <!-- Initial Setup colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_56">#8f000000</color>
+    <color name="black_80">#cc000000</color>
+    <color name="dark_red">#ffd20000</color>
+    <color name="green">#ff018065</color>
+    <color name="white_16">#28ffffff</color>
+    <color name="black_16">#2d000000</color>
+    <color name="black_24">#3d000000</color>
+    <!-- End Initial Setup colors -->
+
+    <color name="edit_text_content_color">#fafafa</color>
+    <color name="edit_text_border_color">#4ddbdbdb</color>
+    <color name="edit_text_border_color_selected">#dbdbdb</color>
+    <color name="edit_text_color_transparent">#4d262626</color>
+    <color name="edit_text_color">#262626</color>
+    <color name="edit_text_hint_color_transparent">#4d999999</color>
+    <color name="edit_text_hint_color">#999999</color>
+
+    <color name="login_button_color_transparent">#b3f17f03</color>
+    <color name="login_button_color_disabled">#dbdbdb</color>
+    <color name="login_button_color">@color/colorPrimary</color>
+    <color name="login_or_color">#dbdbdb</color>
+    <color name="forget_password_color">#999999</color>
+
+    <color name="main_sub_text_color">#838383</color>
+
+</resources>

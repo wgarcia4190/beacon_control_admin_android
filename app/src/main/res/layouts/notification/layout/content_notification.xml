@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sigma.beaconcontrol.views.notification.NotificationActivity"
+    tools:showIn="@layout/notification_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sigma.beaconcontrol.views.widgets.CustomTextView
+            android:id="@+id/notification_message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/notification_text_bottom_margin"
+            android:layout_marginEnd="@dimen/notification_margin_small"
+            android:layout_marginStart="@dimen/notification_margin_small"
+            android:layout_marginTop="@dimen/notification_margin"
+            android:text="@string/notification_message"
+            android:textAllCaps="false"
+            android:textColor="@color/main_sub_text_color"
+            android:textSize="@dimen/notification_sub_text_size"
+            android:textStyle="normal"
+            app:fontPath="Raleway-SemiBold.ttf" />
+
+        <com.sigma.beaconcontrol.views.widgets.CustomEditText
+            android:id="@+id/notification_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/notification_margin"
+            android:layout_marginEnd="@dimen/notification_margin_small"
+            android:layout_marginStart="@dimen/notification_margin_small"
+            android:background="@drawable/square_edit_text"
+            android:gravity="top"
+            android:inputType="textCapSentences|textMultiLine"
+            android:lines="8"
+            android:maxLines="8"
+            android:padding="@dimen/notification_edit_text_padding"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/notification_edit_text_size"
+            app:fontPath="Raleway-Bold.ttf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_normal_height"
+            android:background="@color/black_16" />
+
+        <Spinner
+            android:id="@+id/notification_trigger_dropdown"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:spinnerMode="dialog"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/notification_trigger_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/notification_margin"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+
+            <com.sigma.beaconcontrol.views.widgets.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/trigger"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/notification_text_size"
+                android:textStyle="bold"
+                app:fontPath="Raleway-Bold.ttf" />
+
+            <com.sigma.beaconcontrol.views.widgets.CustomTextView
+                android:id="@+id/notification_trigger_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/notification_margin_small"
+                android:text="@string/on_hello"
+                android:textAllCaps="false"
+                android:textColor="@color/main_sub_text_color"
+                android:textSize="@dimen/notification_sub_text_size"
+                android:textStyle="normal"
+                app:fontPath="Raleway-SemiBold.ttf" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/notification_forward_arrow_size"
+                android:layout_height="@dimen/notification_forward_arrow_size"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                android:tint="@color/main_sub_text_color"
+                app:srcCompat="@drawable/ic_forward_arrow" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_normal_height"
+            android:background="@color/black_16" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

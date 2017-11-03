@@ -1,0 +1,112 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing_big">26dp</dimen>
+    <dimen name="nav_header_title_text">16sp</dimen>
+    <dimen name="nav_header_subtitle_text">14sp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Initial Setup dimens -->
+    <dimen name="initial_padding">24dp</dimen>
+    <dimen name="initial_padding_2">8dp</dimen>
+    <dimen name="initial_padding_3">16dp</dimen>
+
+    <dimen name="initial_margin_1">4dp</dimen>
+    <dimen name="initial_margin_2">16dp</dimen>
+    <dimen name="initial_margin_3">24dp</dimen>
+    <dimen name="initial_margin_4">8dp</dimen>
+
+    <dimen name="image_dialog_height">68dp</dimen>
+    <dimen name="image_dialog_width">110dp</dimen>
+    <dimen name="initial_text_1">8sp</dimen>
+    <dimen name="initial_text_2">14sp</dimen>
+    <dimen name="initial_text_3">17sp</dimen>
+    <dimen name="initial_text_4">18sp</dimen>
+
+    <dimen name="divider_normal_height">2px</dimen>
+    <dimen name="divider_focused_height">4px</dimen>
+
+    <dimen name="progress_dialog_bar_size">30dp</dimen>
+    <dimen name="progress_dialog_padding_top_bottom">20dp</dimen>
+    <dimen name="progress_dialog_padding_start_end">20dp</dimen>
+    <dimen name="progress_dialog_text">14sp</dimen>
+    <dimen name="edit_text_height">48dp</dimen>
+    <!-- End Initial Setup dimens -->
+
+    <!-- General -->
+    <dimen name="edit_text_border_width">1dp</dimen>
+    <dimen name="rounded_corners">4dp</dimen>
+    <dimen name="spinner_horizontal_padding">15dp</dimen>
+    <dimen name="spinner_vertical_padding">10dp</dimen>
+    <dimen name="spinner_vertical_padding_big">12dp</dimen>
+    <!-- End General -->
+
+    <!-- SplashScreen -->
+    <dimen name="splashscreen_logo_size">200dp</dimen>
+    <dimen name="splashscreen_progress_margin">50dp</dimen>
+    <!-- End SplashScreen -->
+
+    <!-- Login -->
+    <dimen name="login_logo_size">130dp</dimen>
+    <dimen name="login_margin_bottom_logo">35dp</dimen>
+    <dimen name="login_margin_top_logo">120dp</dimen>
+    <dimen name="login_edit_text_margin_bottom">15dp</dimen>
+    <dimen name="login_edit_text_margin">28dp</dimen>
+    <dimen name="login_edit_text_padding">16dp</dimen>
+    <dimen name="login_edit_text_size">14sp</dimen>
+    <dimen name="login_button_height">48dp</dimen>
+    <dimen name="eye_size">20dp</dimen>
+    <dimen name="forget_password_text">12sp</dimen>
+    <dimen name="forget_password_padding">15dp</dimen>
+    <!-- End Login -->
+
+    <!-- Main -->
+    <dimen name="main_beacon_name_container_height">50dp</dimen>
+    <dimen name="main_margin">16dp</dimen>
+    <dimen name="main_margin_small">10dp</dimen>
+    <dimen name="main_selected_zone_size">24dp</dimen>
+    <dimen name="main_selected_zone_size_small">20dp</dimen>
+    <dimen name="main_forward_arrow_size">20dp</dimen>
+    <dimen name="main_selected_zone_margin">13dp</dimen>
+    <dimen name="main_sub_text_size">15sp</dimen>
+    <dimen name="main_text_size">17sp</dimen>
+    <dimen name="main_beacon_name_size">23sp</dimen>
+    <dimen name="main_text_start_margin">5dp</dimen>
+    <dimen name="main_text_start_margin_big">25dp</dimen>
+    <dimen name="main_text_bottom_margin">3dp</dimen>
+    <dimen name="main_floating_button_margin">45dp</dimen>
+    <dimen name="main_floating_button_margin_big">125dp</dimen>
+    <dimen name="main_floating_button_size">70dp</dimen>
+    <dimen name="main_edit_text_padding">16dp</dimen>
+    <dimen name="main_edit_text_size">15sp</dimen>
+    <dimen name="main_save_button_height">58dp</dimen>
+    <dimen name="main_logout_button_height">48dp</dimen>
+    <dimen name="main_zone_color_width">10dp</dimen>
+    <dimen name="main_zone_color_width_big">15dp</dimen>
+    <dimen name="main_beacon_pin_size">63dp</dimen>
+    <dimen name="main_zone_forward_arrow_margin">6dp</dimen>
+    <!-- End Main -->
+
+    <!-- Notification -->
+    <dimen name="notification_text_bottom_margin">3dp</dimen>
+    <dimen name="notification_margin_small">10dp</dimen>
+    <dimen name="notification_margin">16dp</dimen>
+    <dimen name="notification_sub_text_size">15sp</dimen>
+    <dimen name="notification_edit_text_padding">16dp</dimen>
+    <dimen name="notification_edit_text_size">15sp</dimen>
+    <dimen name="notification_text_size">17sp</dimen>
+    <dimen name="notification_forward_arrow_size">20dp</dimen>
+    <!-- End Notification -->
+
+    <!-- Zone -->
+    <dimen name="zone_margin">16dp</dimen>
+    <dimen name="zone_radio_size">24dp</dimen>
+    <dimen name="zone_delete_icon_size">25dp</dimen>
+    <!-- End Zone -->
+
+
+
+</resources>

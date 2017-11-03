@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/zone_image"
+            android:layout_width="@dimen/main_selected_zone_size"
+            android:layout_height="@dimen/main_selected_zone_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/zone_margin"
+            android:scaleType="fitCenter" />
+
+        <com.sigma.beaconcontrol.views.widgets.CustomTextView
+            android:id="@+id/zone_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/main_text_start_margin"
+            android:layout_weight="1"
+            android:padding="@dimen/main_margin"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_sub_text_size"
+            android:textStyle="bold"
+            app:fontPath="Raleway-Bold.ttf" />
+
+        <RadioButton
+            android:id="@+id/zone_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/zone_margin"
+            android:buttonTint="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_normal_height"
+        android:background="@color/black_16" />
+
+</LinearLayout>

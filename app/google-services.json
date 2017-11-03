@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "499530172511",
+    "firebase_url": "https://beaconcontroller.firebaseio.com",
+    "project_id": "beaconcontroller",
+    "storage_bucket": "beaconcontroller.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499530172511:android:bdb75db40b360bc5",
+        "android_client_info": {
+          "package_name": "com.sigma.beaconcontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499530172511-grd75quq8mel60fhcv07dub8f8ap6rg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZC4hIDWNxgqd10LJqLCJdnLhNFqLWo0I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

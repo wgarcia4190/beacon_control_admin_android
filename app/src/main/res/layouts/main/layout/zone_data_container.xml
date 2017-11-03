@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/zone_data_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_normal_height"
+        android:background="@color/black_16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_beacon_name_container_height"
+        android:layout_margin="@dimen/main_margin"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/selected_zone_image"
+                android:layout_width="@dimen/main_selected_zone_size"
+                android:layout_height="@dimen/main_selected_zone_size"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/main_selected_zone_margin"
+                android:scaleType="fitCenter" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <com.sigma.beaconcontrol.views.widgets.CustomTextView
+                    android:id="@+id/zone_sub_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/main_text_bottom_margin"
+                    android:text="@string/zone_with_punctuation"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_sub_text_color"
+                    android:textSize="@dimen/main_sub_text_size"
+                    android:textStyle="normal"
+                    app:fontPath="Raleway-SemiBold.ttf" />
+
+                <com.sigma.beaconcontrol.views.widgets.CustomTextView
+                    android:id="@+id/zone_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/main_text_bottom_margin"
+                    android:layout_marginStart="@dimen/main_text_start_margin"
+                    android:layout_toEndOf="@+id/zone_sub_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/main_sub_text_size"
+                    android:textStyle="bold"
+                    app:fontPath="Raleway-Bold.ttf" />
+
+                <com.sigma.beaconcontrol.views.widgets.CustomTextView
+                    android:id="@+id/floor_sub_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/zone_sub_text"
+                    android:text="@string/floor_with_punctuation"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_sub_text_color"
+                    android:textSize="@dimen/main_sub_text_size"
+                    android:textStyle="normal"
+                    app:fontPath="Raleway-SemiBold.ttf" />
+
+                <com.sigma.beaconcontrol.views.widgets.CustomTextView
+                    android:id="@+id/floor_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zone_name"
+                    android:layout_marginStart="@dimen/main_text_start_margin"
+                    android:layout_toEndOf="@+id/floor_sub_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/main_sub_text_size"
+                    android:textStyle="bold"
+                    app:fontPath="Raleway-Bold.ttf" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

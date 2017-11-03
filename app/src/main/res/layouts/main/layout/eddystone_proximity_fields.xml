@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/edddystone_proximity_fields_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/main_margin"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <com.sigma.beaconcontrol.views.widgets.CustomTextView
+        android:id="@+id/beacon_signal_interval_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/main_text_bottom_margin"
+        android:layout_marginEnd="@dimen/main_margin_small"
+        android:layout_marginStart="@dimen/main_margin_small"
+        android:text="@string/signal_interval"
+        android:textAllCaps="false"
+        android:textColor="@color/main_sub_text_color"
+        android:textSize="@dimen/main_sub_text_size"
+        android:textStyle="normal"
+        app:fontPath="Raleway-SemiBold.ttf" />
+
+    <com.sigma.beaconcontrol.views.widgets.CustomEditText
+        android:id="@+id/beacon_signal_interval"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_marginBottom="@dimen/main_margin"
+        android:layout_marginEnd="@dimen/main_margin_small"
+        android:layout_marginStart="@dimen/main_margin_small"
+        android:background="@drawable/square_edit_text"
+        android:hint="@string/signal_interval_hint"
+        android:inputType="number"
+        android:padding="@dimen/main_edit_text_padding"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/main_edit_text_size"
+        app:fontPath="Raleway-Bold.ttf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/main_margin"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.sigma.beaconcontrol.views.widgets.CustomTextView
+                android:id="@+id/beacon_namespace_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_text_bottom_margin"
+                android:layout_marginEnd="@dimen/main_margin_small"
+                android:layout_marginStart="@dimen/main_margin_small"
+                android:text="@string/namespace"
+                android:textAllCaps="false"
+                android:textColor="@color/main_sub_text_color"
+                android:textSize="@dimen/main_sub_text_size"
+                android:textStyle="normal"
+                app:fontPath="Raleway-SemiBold.ttf" />
+
+            <com.sigma.beaconcontrol.views.widgets.CustomEditText
+                android:id="@+id/beacon_namespace"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginEnd="@dimen/main_margin_small"
+                android:layout_marginStart="@dimen/main_margin_small"
+                android:background="@drawable/square_edit_text"
+                android:hint="@string/namespace_hint"
+                android:inputType="text"
+                android:padding="@dimen/main_edit_text_padding"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/main_edit_text_size"
+                app:fontPath="Raleway-Bold.ttf" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.sigma.beaconcontrol.views.widgets.CustomTextView
+                android:id="@+id/beacon_instance_id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_text_bottom_margin"
+                android:layout_marginEnd="@dimen/main_margin_small"
+                android:layout_marginStart="@dimen/main_margin_small"
+                android:text="@string/instance_id"
+                android:textAllCaps="false"
+                android:textColor="@color/main_sub_text_color"
+                android:textSize="@dimen/main_sub_text_size"
+                android:textStyle="normal"
+                app:fontPath="Raleway-SemiBold.ttf" />
+
+            <com.sigma.beaconcontrol.views.widgets.CustomEditText
+                android:id="@+id/beacon_instance_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginEnd="@dimen/main_margin_small"
+                android:layout_marginStart="@dimen/main_margin_small"
+                android:background="@drawable/square_edit_text"
+                android:hint="@string/instance_id_hint"
+                android:inputType="text"
+                android:padding="@dimen/main_edit_text_padding"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/main_edit_text_size"
+                app:fontPath="Raleway-Bold.ttf" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

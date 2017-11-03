@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="bottom_navigation_height">110</integer> <!-- in PX -->
+    <integer name="bottom_navigation_icon_size">28</integer> <!-- in DP -->
+    <integer name="config_activityShortDur">150</integer>
+
+</resources>

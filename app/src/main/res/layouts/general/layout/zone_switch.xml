@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/zone_color_view"
+            android:layout_width="@dimen/main_zone_color_width"
+            android:layout_height="match_parent" />
+
+        <com.sigma.beaconcontrol.views.widgets.CustomTextView
+            android:id="@+id/zone_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/spinner_vertical_padding_big"
+            android:paddingEnd="@dimen/spinner_horizontal_padding"
+            android:paddingStart="@dimen/spinner_horizontal_padding"
+            android:paddingTop="@dimen/spinner_vertical_padding_big"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_sub_text_size"
+            android:textStyle="normal"
+            app:fontPath="Raleway-SemiBold.ttf" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/zone_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:checked="true"
+            android:layout_marginEnd="3dp"
+            app:showText="false" />
+
+        <View
+            android:layout_width="@dimen/divider_normal_height"
+            android:layout_height="match_parent"
+            android:background="@color/black_16" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_normal_height"
+        android:background="@color/black_16" />
+</LinearLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sigma.beaconcontrol.views.main.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/bottom_data"
+            android:layout_alignParentTop="true">
+
+            <fragment
+                android:id="@+id/googleMap"
+                android:name="com.sigma.beaconcontrol.views.widgets.CustomMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/map_beacon_pin"
+                android:layout_width="@dimen/main_beacon_pin_size"
+                android:layout_height="@dimen/main_beacon_pin_size"
+                android:layout_centerInParent="true"
+                android:src="@drawable/marker_move"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bottom_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/zone_data_container" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_normal_height"
+                android:background="@color/black_16" />
+
+            <LinearLayout
+                android:id="@+id/beacon_name_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_beacon_name_container_height"
+                android:layout_margin="@dimen/main_margin"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.sigma.beaconcontrol.views.widgets.CustomTextView
+                    android:id="@+id/beacon_name_sub_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/main_text_bottom_margin"
+                    android:text="@string/beacon_name_with_punctuation"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_sub_text_color"
+                    android:textSize="@dimen/main_sub_text_size"
+                    android:textStyle="normal"
+                    app:fontPath="Raleway-SemiBold.ttf" />
+
+                <com.sigma.beaconcontrol.views.widgets.CustomEditText
+                    android:id="@+id/beacon_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:inputType="text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/main_beacon_name_size"
+                    android:textStyle="bold"
+                    app:fontPath="Raleway-Bold.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/beacon_details_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_normal_height"
+                    android:background="@color/black_16" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/main_margin"
+                        android:layout_marginTop="@dimen/main_margin"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/general_beacon_fields" />
+
+                        <include layout="@layout/ibeacons_proximity_fields" />
+
+                        <include layout="@layout/eddystone_proximity_fields" />
+
+                        <include layout="@layout/beacon_location_fields" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_normal_height"
+                            android:background="@color/black_16" />
+
+                        <include layout="@layout/beacon_zone_data" />
+
+                        <LinearLayout
+                            android:id="@+id/notification_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/main_margin"
+                            android:clickable="true"
+                            android:orientation="horizontal">
+
+                            <com.sigma.beaconcontrol.views.widgets.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@string/notifications"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/main_text_size"
+                                android:textStyle="bold"
+                                app:fontPath="Raleway-Bold.ttf" />
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/main_forward_arrow_size"
+                                android:layout_height="@dimen/main_forward_arrow_size"
+                                android:layout_gravity="center_vertical"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/ic_forward_arrow" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_normal_height"
+                            android:background="@color/black_16" />
+
+                        <com.sigma.beaconcontrol.views.widgets.CustomButton
+                            android:id="@+id/save_beacon_button"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/main_save_button_height"
+                            android:layout_margin="@dimen/main_margin"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/save_beacon"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/main_text_size"
+                            app:fontPath="Raleway-SemiBold.ttf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/main_margin" />
+
+
+                    </LinearLayout>
+                </ScrollView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/cancel_button"
+            android:layout_width="@dimen/main_floating_button_size"
+            android:layout_height="@dimen/main_floating_button_size"
+            android:layout_above="@+id/action_button"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cancel_mapbtn"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/action_button"
+            android:layout_width="@dimen/main_floating_button_size"
+            android:layout_height="@dimen/main_floating_button_size"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/main_floating_button_margin"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow_mapbtn"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

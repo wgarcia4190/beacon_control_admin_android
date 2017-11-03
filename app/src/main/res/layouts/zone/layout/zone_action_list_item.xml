@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/zone_image"
+            android:layout_width="@dimen/main_selected_zone_size"
+            android:layout_height="@dimen/main_selected_zone_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/zone_margin"
+            android:scaleType="fitCenter" />
+
+        <com.sigma.beaconcontrol.views.widgets.CustomEditText
+            android:id="@+id/zone_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/main_text_start_margin"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:inputType="text"
+            android:padding="@dimen/main_margin"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/main_sub_text_size"
+            android:textStyle="bold"
+            app:fontPath="Raleway-Bold.ttf" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/delete_zone_button"
+            android:layout_width="@dimen/zone_delete_icon_size"
+            android:layout_height="@dimen/zone_delete_icon_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/zone_margin"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_delete"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_normal_height"
+        android:background="@color/black_16" />
+
+</LinearLayout>

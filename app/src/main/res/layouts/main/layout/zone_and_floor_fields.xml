@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/zone_and_floor_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/main_margin"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.sigma.beaconcontrol.views.widgets.CustomTextView
+            android:id="@+id/beacon_zone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_text_bottom_margin"
+            android:layout_marginEnd="@dimen/main_margin_small"
+            android:layout_marginStart="@dimen/main_margin_small"
+            android:text="@string/zone_with_punctuation"
+            android:textAllCaps="false"
+            android:textColor="@color/main_sub_text_color"
+            android:textSize="@dimen/main_sub_text_size"
+            android:textStyle="normal"
+            app:fontPath="Raleway-SemiBold.ttf" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_height"
+            android:layout_marginBottom="@dimen/main_text_bottom_margin"
+            android:layout_marginEnd="@dimen/main_margin_small"
+            android:layout_marginStart="@dimen/main_margin_small"
+            android:background="@drawable/square_edit_text">
+
+            <Spinner
+                android:id="@+id/beacon_zone_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black"
+                android:textSize="@dimen/main_edit_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.sigma.beaconcontrol.views.widgets.CustomTextView
+            android:id="@+id/beacon_floor_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_text_bottom_margin"
+            android:layout_marginEnd="@dimen/main_margin_small"
+            android:layout_marginStart="@dimen/main_margin_small"
+            android:text="@string/floor_with_punctuation"
+            android:textAllCaps="false"
+            android:textColor="@color/main_sub_text_color"
+            android:textSize="@dimen/main_sub_text_size"
+            android:textStyle="normal"
+            app:fontPath="Raleway-SemiBold.ttf" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_height"
+            android:layout_marginBottom="@dimen/main_text_bottom_margin"
+            android:layout_marginEnd="@dimen/main_margin_small"
+            android:layout_marginStart="@dimen/main_margin_small"
+            android:background="@drawable/square_edit_text">
+
+            <Spinner
+                android:id="@+id/beacon_floor_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black"
+                android:textSize="@dimen/main_edit_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

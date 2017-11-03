@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+        javaMaxHeapSize "6g"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/MANIFEST.MF'
+    }
+
+    defaultConfig {
+        applicationId "com.sigma.beaconcontrol"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        production {
+            dimension "default"
+            buildConfigField 'String', 'API_PATH', '"10.0.0.7:8090/api/v1/beacon-control"'
+        }
+        qa {
+            dimension "default"
+            buildConfigField 'String', 'API_PATH', '"10.0.0.7:8090/api/v1/beacon-control"'
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res',
+                            'src/main/res/layouts',
+                            'src/main/res/layouts/splashscreen',
+                            'src/main/res/layouts/notification',
+                            'src/main/res/layouts/login',
+                            'src/main/res/layouts/general',
+                            'src/main/res/layouts/main',
+                            'src/main/res/layouts/zone'
+                    ]
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.android.support:support-v13:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services-auth:11.4.2'
+    compile 'com.google.android.gms:play-services-maps:11.4.2'
+    compile 'com.google.android.gms:play-services-base:11.4.2'
+    compile 'com.google.android.gms:play-services-gcm:11.4.2'
+    compile 'com.google.android.gms:play-services-location:11.4.2'
+    compile 'com.google.firebase:firebase-core:11.4.2'
+    compile 'com.google.firebase:firebase-crash:11.4.2'
+    compile 'com.google.firebase:firebase-messaging:11.4.2'
+    compile 'com.google.firebase:firebase-perf:11.4.2'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.2'
+    compile 'io.jsonwebtoken:jjwt:0.7.0'
+    testCompile 'junit:junit:4.12'
+    implementation project(':beacon-sdk')
+}
+apply plugin: 'com.google.gms.google-services'
